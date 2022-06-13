@@ -1,6 +1,6 @@
 import * as React from "react";
 import "../Color/tailwind.css";
-import { useQuiz } from "../Context/QuizContext";
+import { useQuiz } from "../Context/QuizProvider";
 import { Link } from "react-router-dom";
 
 export function Home() {
