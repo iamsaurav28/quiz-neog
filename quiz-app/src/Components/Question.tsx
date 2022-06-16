@@ -1,7 +1,9 @@
 import * as React from "react";
+import Options from "./Options";
 import { useState } from "react";
-import { Result } from "./Result";
-import "../Color/tailwind.css";
+import { Result } from "./Result"
+import "../Color/tailwind.css"
+
 import { useParams } from "react-router-dom";
 import { useQuiz } from "../Context/QuizProvider";
 
@@ -27,7 +29,11 @@ export default function QuestionComponent() {
             {state.quizzes[Number(quizId) - 1].questions.length}
           </p>
           <p className="text-2xl font-semibold">{ques.question}</p>
-   
+          <Options
+            quizId={quizId}
+            question_no={question_no}
+            options={ques.options}
+          />
           <button
             className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 focus:outline-none border-blue-500 hover:border-transparent rounded"
             onClick={nextQuestionHandler}

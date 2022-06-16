@@ -9,7 +9,7 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 render(
-  <QuizProvider>
+  <QuizProvider children={undefined}>
     <Router>
       <App />
     </Router>
